@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Full Page Overlays</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .overlay {
+      display: none;              /* Hidden by default */
+      position: fixed;            /* Full screen cover */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Only show the one that's targeted */
+    .overlay:target {
+      display: flex;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .close-btn:hover {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Main image with clickable areas -->
+<img src="recruiter.png" usemap="#click-map" alt="Main Image" >
+
+<map name="click-map">
+  <!-- 1st clickable area -->
+  <area shape="rect" coords="359,751,66,675" href="#resume" alt=" Overlay">
+ <!-- 2nd clickable area -->
+  <area shape="rect" coords="233,1108,78,858" href="#education" alt=" Overlay">
+<!-- 3rd clickable area -->
+  <area shape="rect" coords="422,1115,269,854" href="#skills" alt="Overlay">
+ <!-- 4th clickable area -->
+  <area shape="rect" coords="996,1116,843,855" href="#contac" alt="Overlay">
+<!-- 5th clickable area -->
+  <area shape="rect" coords="613,1112,460,851" href="#project" alt="Overlay">
+<!-- 6th clickable area -->
+  <area shape="rect" coords="804,1112,651,851" href="#reco" alt="Overlay">
+<!-- 7th clickable area -->
+  <area shape="rect" coords="552,138,436,93" href="#hire" alt="Overlay">
+
+</map>
+
+<!-- 1st overlay -->
+<div id="resume" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="Aditi Baidya Uma.jpg" alt="Overlay Image 3">
+</div>
+<!-- 2nd overlay -->
+<div id="education" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="education.png" alt="Overlay Image 3">
+</div>
+<!-- 3rd overlay -->
+<div id="skills" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="skill.png" alt="Overlay Image 3">
+</div>
+<!-- 4th overlay -->
+<div id="contac" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="contac.png" alt="Overlay Image 3">
+</div>
+<!-- 5th overlay -->
+<div id="project" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="project.png" alt="Overlay Image 3">
+</div>
+<!-- 6th overlay -->
+<div id="reco" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="reco.png" alt="Overlay Image 3">
+</div>
+<!-- 7th overlay -->
+<div id="hire" class="overlay">
+  <a href="#" class="close-btn">&times;</a>
+  <img src="contac.png" alt="Overlay Image 3">
+</div>
+
+
+
+</body>
+</html>
